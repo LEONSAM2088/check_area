@@ -81,7 +81,7 @@
                                         <td>X</td>
                                         <td>Y</td>
                                         <td>R</td>
-                                        <td>IsCathed</td>
+                                        <td>Точка в области</td>
                                     </tr>
                                 </thead>
                                 <tbody>
@@ -90,7 +90,7 @@
                                             <td><c:out value="${point.getX()}" /></td>
                                             <td><c:out value="${point.getY()}" /></td>
                                             <td><c:out value="${point.getR()}" /></td>
-                                            <td><c:out value="${point.isCatch()}" /></td>
+                                            <td><c:out value="${point.isCatch()?'Да':'Нет'}" /></td>
                                         </tr>
 
                                     </c:forEach>
@@ -110,8 +110,6 @@
 
                     </div>
 
-
-                </div>
                 <div id="right-bar"></div>
             </div>
             <div class="footer">
@@ -158,6 +156,13 @@
     graph = document.getElementById('graph');
     img = document.getElementById('my-canvas');
     img.addEventListener('click', async function(e) {
+        const reason = document.getElementById('reason');
+        reason.innerHTML = '';
+        if(currentR==null){
+
+            reason.innerHTML = 'Невозможно определить координаты точки - выберите R'; return;
+        }
+
         let c = img.getBoundingClientRect()
 
         var canvas = document.querySelector('#my-canvas');

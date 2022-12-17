@@ -31,6 +31,7 @@ async function click_handler() {
         X = Xinput;
         Y = Yinput.value;
         R = Rinput;
+        if(Y>5 || Y<-3) {reason.innerHTML = 'Y должен быть в пределах [-3..5]'; return;}
         if(!X) {reason.innerHTML = 'Введите X'; return;}
         if(!Y) {reason.innerHTML = 'Введите Y'; return;}
         if(!R) {reason.innerHTML = 'Введите R'; return;}
@@ -90,7 +91,8 @@ async function click_X_box_handler(id) {
 let currentR;
 async function click_R_box_handler(id) {
     let radio = document.getElementById(id);
-
+    const reason = document.getElementById('reason');
+    reason.innerHTML = '';
 
 
     currentR = radio.value;

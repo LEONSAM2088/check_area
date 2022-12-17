@@ -19,7 +19,7 @@
         <th>X</th>
         <th>Y</th>
         <th>R</th>
-        <th>Попал</th>
+        <th>Точка в области</th>
     </tr>
     </thead>
     <tbody>
