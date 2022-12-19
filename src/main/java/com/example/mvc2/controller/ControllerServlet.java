@@ -33,7 +33,7 @@ public class ControllerServlet extends HttpServlet {
         }
 
 
-        getServletContext().getRequestDispatcher("/index.jsp").forward(request, response);
+        getServletContext().getRequestDispatcher("/main.jsp").forward(request, response);
     }
     public void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
         Point point = Point.getPoint(request);

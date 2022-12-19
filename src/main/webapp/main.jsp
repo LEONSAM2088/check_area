@@ -75,6 +75,7 @@
 
 <p><input id="button" type="submit" onclick="click_handler()"/>
     <input id="reset_button" type="submit" onclick="reset_results()" value="Сбросить результаты"/></p>
+                            <canvas id="my-canvas" width="224" height="215"></canvas>
                             <table>
                                 <thead>
                                     <tr>
@@ -104,7 +105,7 @@
 
 
                         </div>
-                        <canvas id="my-canvas" width="224" height="215"></canvas>
+
 
                         </div>
 

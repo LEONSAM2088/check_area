@@ -456,8 +456,12 @@ font-size: 20px;
 table {
     display: inline-table;
     margin: 32px 0px 1px 30px;
+    border: #870000 solid;
     width: 100%;
     color: white;
+}
+td {
+    border: #870000 solid;
 }
 input[type="text"] {
     background-color: #ff000000;
